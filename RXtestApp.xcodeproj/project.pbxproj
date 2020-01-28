@@ -17,6 +17,7 @@
 		447EB90423E0569200521680 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447EB90323E0569200521680 /* PhotoCell.swift */; };
 		447EB90623E05BF900521680 /* PhotoWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447EB90523E05BF900521680 /* PhotoWriter.swift */; };
 		447EB90823E05C2300521680 /* UIImageCollage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447EB90723E05C2300521680 /* UIImageCollage.swift */; };
+		447EB90E23E0B72700521680 /* AlertExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447EB90D23E0B72700521680 /* AlertExtention.swift */; };
 		B9C6F771703893ACEF191E60 /* Pods_RXtestApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F79FE8EE351917303A452B11 /* Pods_RXtestApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +36,7 @@
 		447EB90323E0569200521680 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		447EB90523E05BF900521680 /* PhotoWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoWriter.swift; sourceTree = "<group>"; };
 		447EB90723E05C2300521680 /* UIImageCollage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageCollage.swift; sourceTree = "<group>"; };
+		447EB90D23E0B72700521680 /* AlertExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertExtention.swift; sourceTree = "<group>"; };
 		F79FE8EE351917303A452B11 /* Pods_RXtestApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RXtestApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -95,6 +97,7 @@
 				447EB90323E0569200521680 /* PhotoCell.swift */,
 				447EB8F123E0562C00521680 /* MainViewController.swift */,
 				447EB90123E0567700521680 /* PhotosVC.swift */,
+				447EB90D23E0B72700521680 /* AlertExtention.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -254,6 +257,7 @@
 				447EB8F023E0562C00521680 /* SceneDelegate.swift in Sources */,
 				447EB90623E05BF900521680 /* PhotoWriter.swift in Sources */,
 				447EB90823E05C2300521680 /* UIImageCollage.swift in Sources */,
+				447EB90E23E0B72700521680 /* AlertExtention.swift in Sources */,
 				447EB90223E0567700521680 /* PhotosVC.swift in Sources */,
 				447EB90423E0569200521680 /* PhotoCell.swift in Sources */,
 			);
