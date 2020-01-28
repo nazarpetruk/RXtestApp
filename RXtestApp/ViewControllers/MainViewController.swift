@@ -57,7 +57,7 @@ class MainViewController: UIViewController {
             images.value.append(newImage)
             },onDisposed: {
                 print("Completed Photo selection")
-            }).disposed(by: disposeBag)
+        }).disposed(by: photosViewController.disposeBag2)
     }
 
     func showMessage(_ title: String, description: String? = nil) {

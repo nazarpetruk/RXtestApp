@@ -16,11 +16,12 @@ private let reuseIdentifier = "Cell"
 class PhotosVC: UICollectionViewController {
 
     // MARK: public properties
-    
+    let disposeBag2 = DisposeBag()
 
     // MARK: private properties
     private lazy var photos = PhotosVC.loadPhotos()
     private lazy var imageManager = PHCachingImageManager()
+    
 
     private lazy var thumbnailSize: CGSize = {
       let cellSize = (self.collectionViewLayout as! UICollectionViewFlowLayout).itemSize
@@ -46,6 +47,7 @@ class PhotosVC: UICollectionViewController {
 
     override func viewWillDisappear(_ animated: Bool) {
       super.viewWillDisappear(animated)
+        selectedPhotosSubject.onCompleted()
 
     }
 
