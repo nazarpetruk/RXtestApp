@@ -91,7 +91,7 @@
         <!--PhotosVC-->
         <scene sceneID="Sov-4n-x3P">
             <objects>
-                <collectionViewController id="Snk-S7-hNJ" customClass="PhotosVC" customModule="RXtestApp" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController storyboardIdentifier="PhotosVC" id="Snk-S7-hNJ" customClass="PhotosVC" customModule="RXtestApp" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="wQx-Sz-qm1">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
