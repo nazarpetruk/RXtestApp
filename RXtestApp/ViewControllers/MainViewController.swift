@@ -22,6 +22,7 @@ class MainViewController: UIViewController {
     //MARK: Variables
     private let disposeBag = DisposeBag()
     private let images = Variable<[UIImage]>([])
+    private var imageCache = [Int]()
     
     
     override func viewDidLoad() {
@@ -41,6 +42,7 @@ class MainViewController: UIViewController {
     
     @IBAction func actionClear() {
         images.value = []
+        imageCache = []
     }
 
     @IBAction func actionSave() {
@@ -60,27 +62,46 @@ class MainViewController: UIViewController {
     @IBAction func actionAdd() {
         let photosViewController = storyboard!.instantiateViewController(identifier: "PhotosVC") as! PhotosVC
         navigationController?.pushViewController(photosViewController, animated: true)
+        
         let newPhotos = photosViewController.selectedPhotos.share()
-        newPhotos.subscribe(onNext: {
+        newPhotos
+        .filter {
+                newImage in
+                return newImage.size.width > newImage.size.height
+        }
+        .filter {
+            [weak self] newImage in
+            let len = UIImage.pngData(newImage)()?.count ?? 0
+            guard self?.imageCache.contains(len) == false else {
+                return false
+            }
+            self?.imageCache.append(len)
+            return true
+        }
+        .subscribe(onNext: {
             [weak self] newImage in
             guard let images = self?.images else {return}
             images.value.append(newImage)
-            },onDisposed: {
-                print("Completed Photo selection")
-        }).disposed(by: photosViewController.disposeBag2)
+            },onDisposed: { print("Completed Photo selection")
+        })
+        .disposed(by: photosViewController.disposeBag2)
+        
+        
+        
         
         newPhotos.ignoreElements().subscribe(onCompleted: {
             [weak self] in
             self?.updateNavigationIcon()
-            }).disposed(by: disposeBag)
+        })
+            .disposed(by: disposeBag)
     }
-
+    
     func showMessage(_ title: String, description: String? = nil) {
         alert(title: title, text: description).subscribe(onNext: {
             [weak self] in
             self?.dismiss(animated: true, completion: nil)
         })
-        .disposed(by: disposeBag)
+            .disposed(by: disposeBag)
     }
     
     private func updateUI(photos: [UIImage]) {
