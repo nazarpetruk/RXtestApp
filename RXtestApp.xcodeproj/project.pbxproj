@@ -37,6 +37,7 @@
 		447EB90523E05BF900521680 /* PhotoWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoWriter.swift; sourceTree = "<group>"; };
 		447EB90723E05C2300521680 /* UIImageCollage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageCollage.swift; sourceTree = "<group>"; };
 		447EB90D23E0B72700521680 /* AlertExtention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertExtention.swift; sourceTree = "<group>"; };
+		447EB91023E1D51C00521680 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		F79FE8EE351917303A452B11 /* Pods_RXtestApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RXtestApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -73,6 +74,7 @@
 		447EB8EC23E0562C00521680 /* RXtestApp */ = {
 			isa = PBXGroup;
 			children = (
+				447EB90F23E1D4F700521680 /* Operators playground */,
 				447EB90B23E05DEB00521680 /* Window Delegates */,
 				447EB90923E05D0600521680 /* Custom Classes */,
 				447EB90C23E05E0D00521680 /* Assets&Storyboard */,
@@ -119,6 +121,14 @@
 				447EB8F823E0562F00521680 /* LaunchScreen.storyboard */,
 			);
 			path = "Assets&Storyboard";
+			sourceTree = "<group>";
+		};
+		447EB90F23E1D4F700521680 /* Operators playground */ = {
+			isa = PBXGroup;
+			children = (
+				447EB91023E1D51C00521680 /* MyPlayground.playground */,
+			);
+			path = "Operators playground";
 			sourceTree = "<group>";
 		};
 		6D67DB480748A1E65ED0EBF2 /* Pods */ = {
