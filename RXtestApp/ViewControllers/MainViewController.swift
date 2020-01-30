@@ -65,6 +65,10 @@ class MainViewController: UIViewController {
         
         let newPhotos = photosViewController.selectedPhotos.share()
         newPhotos
+        .takeWhile {
+            [weak self] image in
+            return (self?.images.value.count ?? 0) < 6
+        }
         .filter {
                 newImage in
                 return newImage.size.width > newImage.size.height
