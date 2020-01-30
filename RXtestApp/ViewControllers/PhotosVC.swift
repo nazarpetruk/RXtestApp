@@ -75,6 +75,7 @@ class PhotosVC: UICollectionViewController {
     
     private func errorMessage() {
         alert(title: "No access to Camera Roll", text: "You can grant access from Settings")
+            .take(5.0, scheduler: MainScheduler.instance)
             .subscribe(onDisposed : {
                 [weak self] in
                 self?.dismiss(animated: true, completion: nil)
